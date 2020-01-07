@@ -1,0 +1,72 @@
+<div class="container  card col-xl-4 col-lg-6 col-md-3  col-sm-3 mb-3">
+    <!-- Content here -->
+
+    <div class="container col-xl-12">
+      <div class="row justify-content-md-center">
+          
+              <div class="bg-danger card col-xl-4 col-lg-6 col-md-6 mb-3">
+                <div class="card-body  text-white" >
+                  Total Records : {{total}}
+                </div>
+              </div>
+      </div> 
+    </div>
+
+
+    <div class="container text-center">
+      <h4>Option Selected : {{selectedOption}}</h4>
+      <br/>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        
+       
+          <div class="col-sm-3">
+            <h6>Please Select Your Option...</h6>
+          </div>
+          <div class="col-sm-3"> 
+              <div  class="form-group">
+                  <select (change)="navSelected($event.target.value)" class="form-control">
+                      <option *ngFor="let type of SearchType" [value] = "type">{{type}}</option>
+                  </select>
+              </div>
+          </div>
+          
+          <div class="col-sm-3 ">
+            <h6>Please Select Per Page Record......</h6>
+          </div>
+          <div class="col-sm-3">
+              <div  class="form-group">
+                  <select (change)="navperpageSelected($event.target.value)" class="form-control">
+                      <option *ngFor="let type of PerPageRec" [value] = "type">{{type}}</option>
+                  </select>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="table-responsive-sm mt-5">
+        <table class="table table-hover table-sm" >
+          <thead>
+            <tr>
+              <th style="width: 33.33%" scope="col">#</th>
+              <th style="width: 33.33%"scope="col">Name</th>
+              <th style="width: 33.33%" scope="col">Image</th>
+            </tr>
+            
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of collection.data | paginate: config" class="table-primary">
+              <th scope="row">{{item.id}}</th>
+              <td>{{item.photographer}}</td>
+              <td><img src="{{item.src.medium}}" height="200" width="200"></td>
+            </tr>
+          </tbody>
+        </table>
+   
+
+    <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+    </div>
+   
+ 
+</div>

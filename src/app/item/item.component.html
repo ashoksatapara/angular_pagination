@@ -1,0 +1,34 @@
+<form #form="ngForm" autocomplete="off" ngif="service.formData" (submit)="onSubmit(form)">  
+    <input  type = "hidden" name = "ItemID" #ItemID="ngModel" [(ngModel)]="service.formData.ItemID">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">#</div>
+                            <input name = "Name" #Name="ngModel" [(ngModel)]="service.formData.Name" class="form-control" [class.is-invalid] ="!isvalid && service.formData.Name==0">
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Price:</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">#</div>
+                            <input name = "Price" #Price="ngModel" [(ngModel)]="service.formData.Price" class="form-control" >
+                        </div>
+                    </div> 
+                </div>               
+            </div>
+        </div>
+
+        
+        <div class="form-group">
+            <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i>Submit</button>
+            <a class ="btn btn-outline-dark ml-1" routerLink="/items"><i class="fa fa-table"></i>View Items</a>  
+        </div>
+    </form>
+    

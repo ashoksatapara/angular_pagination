@@ -1,0 +1,130 @@
+
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)" novalidate>
+        <div class="container col-4" >
+  
+          <div class="card ">
+            <div class="card-body">
+            <div class="form-group">
+                First Name:
+                <div class="input-group">
+                    <input formControlName="fname" class="form-control" required   /> <br/>
+              </div>
+            </div>  
+            
+            <div *ngIf="contactForm.controls['fname'].invalid && (contactForm.controls['fname'].dirty || contactForm.controls['fname'].touched)" >
+              <div *ngIf="contactForm.controls['fname'].errors.required" class="alert alert-danger">
+                First Name is required.
+              </div>
+              
+            </div>
+            
+            
+            <div class="form-group">
+              Last Name:
+              <div class="input-group">
+                  <input formControlName="lname" class="form-control" required minlength="4"   /> <br/>
+            </div>
+            </div>  
+            
+            <div *ngIf="contactForm.controls['lname'].invalid && (contactForm.controls['lname'].dirty || contactForm.controls['lname'].touched)" >
+            <div *ngIf="contactForm.controls['lname'].errors.required" class="alert alert-danger">
+              Last Name is required.
+            </div>
+            </div>
+            
+            
+            <div class="form-group">
+                Email:
+                <div class="input-group">
+                    <input formControlName="email" class="form-control" required   /> <br/>
+              </div>
+            </div>  
+            
+            <div *ngIf="contactForm.controls['email'].invalid && (contactForm.controls['email'].dirty || contactForm.controls['email'].touched)" >
+              <div *ngIf="contactForm.controls['email'].errors.required" class="alert alert-danger">
+              Email is required.
+            </div>
+            </div>
+            
+            <div class="form-group">
+              Mobile : 
+              <div class="input-group">
+              <input formControlName="mobile" required/> <br />
+              </div>
+            </div>
+            
+            
+            <div *ngIf="contactForm.controls['mobile'].invalid && (contactForm.controls['mobile'].dirty || contactForm.controls['mobile'].touched)" >
+              <div *ngIf="contactForm.controls['mobile'].errors.required" class="alert alert-danger">
+                mobile is required.
+            </div>
+            </div>
+            
+            
+            
+            <div class="form-group ">
+              
+              Gender : 
+              <input type="radio"  value = "Male" formControlName="gender" />Male 
+              <input type="radio"  value = "Female" formControlName="gender" />Female <br />
+            </div>
+            
+            
+            
+            <div class="form-group custom-checkbox">
+              <input type="checkbox" name = "remme" formControlName="remme" [checked]= "true" /> Remember Me 
+            </div>
+            
+                        
+            <div class="form-group">
+              Password:
+              <div class="input-group">
+                  <input type= "password" formControlName="password" class="form-control" required minlength="6"   /> <br/>
+            </div>
+            </div>  
+            
+            <div *ngIf="contactForm.controls['password'].invalid && (contactForm.controls['password'].dirty || contactForm.controls['password'].touched)" >
+                <div *ngIf="contactForm.controls['password'].errors.required" class="alert alert-danger">
+                  password is required.
+                </div>
+
+                <div *ngIf="contactForm.controls['password'].errors.minlength" class="alert alert-danger">
+                  Minimum Length is 6.
+                </div>
+            </div>
+            
+
+            <div class="form-group">
+              confirm Password:
+              <div class="input-group">
+                  <input type= "password" formControlName="confirmPassword" class="form-control" required minlength="6"   /> <br/>
+            </div>
+            </div>  
+            
+            <div *ngIf="contactForm.controls['confirmPassword'].invalid && (contactForm.controls['confirmPassword'].dirty || contactForm.controls['confirmPassword'].touched)" >
+                <div *ngIf="contactForm.controls['confirmPassword'].errors.required" class="alert alert-danger">
+                  confirm Password is required.
+                </div>
+
+                <div *ngIf="contactForm.controls['confirmPassword'].errors.minlength" class="alert alert-danger">
+                  Minimum Length is 6.
+                </div>
+
+                <div *ngIf="contactForm.controls['confirmPassword'].errors.mustMatch">Passwords must match</div>
+
+            </div>
+            
+
+            
+            <div class="form-group">
+                <button type="submit"  class="btn btn-success"   [disabled]="contactForm.pristine || contactForm.invalid" > Save </button>
+            </div>
+
+          </div>
+        </div>
+        </div>
+       
+      </form>
+
+  
+  
