@@ -6,6 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { LoginsComponent } from './logins/logins.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import {CreateUserComponent} from './signup/create-user.component';
+import {MultiselectComponent} from './multiselect/multiselect.component';
+
 
 const routes: Routes = [
   {path:'',redirectTo:'/',pathMatch:'full'},
@@ -21,6 +23,7 @@ const routes: Routes = [
   ]},
   {path:'pagination', component:PaginationComponent},
   {path:'signup', component:CreateUserComponent},
+  {path:'multiselect', component:MultiselectComponent}
   
 ];
 

@@ -18,6 +18,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { MustMatchDirective } from './shared/must-match.directive';
 import {CreateUserComponent} from './signup/create-user.component';
 import { HelloComponent } from './shared/hello.component';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import {MultiselectComponent} from './multiselect/multiselect.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { HelloComponent } from './shared/hello.component';
     PaginationComponent,
     MustMatchDirective,
     CreateUserComponent,
-    HelloComponent
+    HelloComponent,
+    MultiselectComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { HelloComponent } from './shared/hello.component';
     BrowserAnimationsModule,
     MatDialogModule,
     HttpClientModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgMultiSelectDropDownModule.forRoot()
   ],
   entryComponents:[],
   providers: [ItemService,LoginService],
