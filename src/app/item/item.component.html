@@ -1,3 +1,28 @@
+<div class ="jumbotron jumbotron-fluid">  
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>HTML Table Layout</title>
+    </head>
+    <body style="margin:0px;">
+        <table style="width:100%; border-collapse:collapse; font:14px Arial,sans-serif;">
+            <tr>
+                <td colspan="2" style="padding:10px 20px; background-color:#acb3b9;">
+                    <h1 style="font-size:24px;">Tutorial Republic</h1>
+                </td>
+            </tr>
+            <tr style="height:800px;">
+                <td style="width:20%; padding:20px; background-color:#d4d7dc; vertical-align: top;">
+                    <ul style="list-style:none; padding:0px; line-height:24px;">
+                        <li><a href="#" style="color:#333;">Home</a></li>
+                        <li><a href="#" style="color:#333;">About</a></li>
+                        <li><a href="#" style="color:#333;">Contact</a></li>
+                    </ul>
+                </td>
+                <td style="padding:20px; background-color:#f2f2f2; vertical-align:top;">
+                    
+
 <form #form="ngForm" autocomplete="off" ngif="service.formData" (submit)="onSubmit(form)">  
     <input  type = "hidden" name = "ItemID" #ItemID="ngModel" [(ngModel)]="service.formData.ItemID">
         <div class="row">
@@ -32,3 +57,19 @@
         </div>
     </form>
     
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="padding:5px; background-color:#acb3b9; text-align:center;">
+                    <p>copyright &copy; tutorialrepublic.com</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+    </html>   
+    <router-outlet></router-outlet>
+  
+  </div>
+
+  
+

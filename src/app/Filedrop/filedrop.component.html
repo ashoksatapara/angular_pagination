@@ -1,0 +1,28 @@
+<div class="container col-4">
+    <div class="card ">
+       <div class="card-header"><h2></h2></div>
+            <div class="card-body">
+                <form #form="ngForm" autocomplete="off"  (submit)="onSubmit(form)">  
+                <ngx-dropzone name = "dropzone" (change)="onSelect($event)">
+                    <ngx-dropzone-label name = "dropzone2" >Drop it, baby!</ngx-dropzone-label>
+                    <ngx-dropzone-preview  name = "dropzone3" *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+                        <ngx-dropzone-label name = "dropzone4">{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                    </ngx-dropzone-preview>
+                </ngx-dropzone>
+
+                <ngx-dropzone-image-preview name = "dropzone5" ngProjectAs="ngx-dropzone-preview" *ngFor="let f of files" [file]="f">
+                    <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+                </ngx-dropzone-image-preview>
+
+                <div class="form-group"> 
+                    <button type="submit">Submit</button>
+                </div>
+                </form>   
+
+                </div>
+                <div class="card-footer"></div>
+</div>
+
+</div>
+
+

@@ -38,42 +38,34 @@ export class MultiselectComponent implements OnInit {
 
     
     onItemSelect(item: any) {
-        let allItems=   this.selectedItems;
-        if(allItems.filter(allItem=>allItem.id ==item.id).length==0){
+      let allItems=   this.selectedItems;
+      if(allItems.filter(allItem=>allItem.id ==item.id).length==0){
             this.selectedItems.push(item);
-        }
-     
-     
-        
-        
+      }
+      console.log(this.selectedItems);
     }
 
   
     onSelectAll(items: any) {
-
     this.selectedItems.push(items);
     console.log(this.selectedItems);
-   
     }
 
     onItemDeSelect(item: any) {
-
       this.selectedItems.filter(allItem=>allItem.id !=item.id);
       console.log(this.selectedItems);
-      }
+    }
 
      
 
     onItemDeSelectAll(items: any) {
-
-        this.selectedItems.reduce(items);
-        console.log(this.selectedItems);
-       
-        }
+        this.selectedItems=[];
+        console.log(this.selectedItems);   
+    }
 
         
     onSubmit(form:NgForm){
             console.log(this.selectedItems);
-        }
+    }
        
   }

@@ -1,0 +1,17 @@
+[
+    {
+        "data": [1000],
+        "name": 2015,
+        "type": "column"
+    },
+    {
+        "data": [1105],
+        "name": 2014,
+        "type": "column"
+    },
+    {
+        "data": [1310],
+        "name": 2016,
+        "type": "column"
+    }
+]

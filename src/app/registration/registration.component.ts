@@ -4,11 +4,11 @@ import { phoneNumberValidator } from '../shared/phone-validator';
 
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
+  selector: 'app-registration',
+  templateUrl: './registration.component.html',
   styles: []
 })
-export class LoginComponent implements OnInit {
+export class RegistrationComponent implements OnInit {
   public imagePath;
   imgURL: any;
   public message: string;

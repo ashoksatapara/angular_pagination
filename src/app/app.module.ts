@@ -10,8 +10,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ItemsComponent } from './items/items.component';
 import { ItemComponent } from './item/item.component';
 import { ItemService } from './shared/item.service';
-import { LoginsComponent } from './logins/logins.component';
-import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { LoginService } from './shared/login.service';
 import { PaginationComponent } from './pagination/pagination.component';
 import {NgxPaginationModule} from 'ngx-pagination';
@@ -20,19 +19,50 @@ import {CreateUserComponent} from './signup/create-user.component';
 import { HelloComponent } from './shared/hello.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import {MultiselectComponent} from './multiselect/multiselect.component';
+import {DaterangepickerComponent} from './daterangepicker/daterangepicker.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {DatepickerComponent} from './datepicker/datepicker.component';
+import { DateRangePickerModule } from '@uiowa/date-range-picker';
+import {FileuploadComponent}  from './fileupload/fileupload.component';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+import { FiledropComponent } from './Filedrop/filedrop.component';
+import { NgxEditorModule } from 'ngx-editor';
+import { TexteditorComponent } from './texteditor/texteditor.component';
+import { HighchartsChartModule } from "highcharts-angular";
+import { BarchartComponent } from "./chart/barchart.component";
+import { SplinechartComponent } from "./chart/splinechart.component";
+import { PiechartComponent } from "./chart/piechart.component";
+import { ColorPickerModule } from 'ngx-color-picker';
+import { ColorpickerComponent } from "./colorpicker/colorpicker.component";
+import { ArchwizardModule } from 'angular-archwizard';
+import { WizardComponent } from './wizard/wizard.component';
+import {ProgressBarModule} from "angular-progress-bar";
+import {ProgressbarComponent } from './progressbar/progressbar.component';
+import { HtmltopdfComponent } from './Htmltopdf/htmltopdf.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemsComponent,
     ItemComponent,
-    LoginsComponent,
-    LoginComponent,
+    RegistrationComponent,
     PaginationComponent,
     MustMatchDirective,
     CreateUserComponent,
     HelloComponent,
-    MultiselectComponent
+    MultiselectComponent,
+    DaterangepickerComponent,
+    DatepickerComponent,
+    FileuploadComponent,
+    FiledropComponent,
+    TexteditorComponent,
+    BarchartComponent,
+    SplinechartComponent, 
+    PiechartComponent,
+    ColorpickerComponent,
+    WizardComponent,
+    ProgressbarComponent,
+    HtmltopdfComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +74,15 @@ import {MultiselectComponent} from './multiselect/multiselect.component';
     MatDialogModule,
     HttpClientModule,
     ToastrModule.forRoot(),
-    NgMultiSelectDropDownModule.forRoot()
+    NgMultiSelectDropDownModule.forRoot(),
+    NgbModule,
+    DateRangePickerModule,
+    NgxDropzoneModule,
+    NgxEditorModule,
+    HighchartsChartModule,
+    ColorPickerModule,
+    ArchwizardModule,
+    ProgressBarModule
   ],
   entryComponents:[],
   providers: [ItemService,LoginService],

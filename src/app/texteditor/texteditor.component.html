@@ -1,0 +1,21 @@
+<div class="container col-4">
+    <div class="card ">
+       <div class="card-header"><h2></h2></div>
+            <div class="card-body">
+                <form #form="ngForm" autocomplete="off"  (submit)="onSubmit(form)">  
+
+                    <app-ngx-editor name="htmlContent" [config]="editorConfig"  [placeholder]="'Enter text here...'" [spellcheck]="true" [(ngModel)]="htmlContent"></app-ngx-editor>
+                    
+
+                    <div class="form-group"> 
+                        <button type="submit">Submit</button>
+                    </div>
+                    </form>   
+    
+                    </div>
+                    <div class="card-footer"></div>
+    </div>
+    
+    </div>
+
+    

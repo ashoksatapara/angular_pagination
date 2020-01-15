@@ -6,7 +6,6 @@ import { ItemService } from 'src/app/shared/item.service';
 import { NgForm } from '@angular/forms';
 import { Item } from '../shared/item.mode';
 
-
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
@@ -18,7 +17,7 @@ export class ItemComponent implements OnInit {
  constructor(private service:ItemService ,
    private toastr: ToastrService,
    private router:Router,
-   private currentRoute:ActivatedRoute) { }
+   private currentRoute:ActivatedRoute ) { }
 
 
  ngOnInit() { 

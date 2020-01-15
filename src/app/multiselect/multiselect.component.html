@@ -1,6 +1,7 @@
 
-    
+    <form #form="ngForm" autocomplete="off" ngif="dropdownList" (submit)="onSubmit(form)">  
     <ng-multiselect-dropdown
+    name="multiselect"
     [placeholder]="'custom placeholder'"
     [data]="dropdownList"
     [(ngModel)]="selectedItems"
@@ -11,11 +12,13 @@
     (onDeSelectAll)="onItemDeSelectAll($event)"
     >
     </ng-multiselect-dropdown>
+
     
-    <form #form='ngForm' (ngSubmit)="onSubmit(form)">
         <div class="form-group"> 
             <button type="submit">Submit</button>
         </div>
+
+    
     </form>   
 
     

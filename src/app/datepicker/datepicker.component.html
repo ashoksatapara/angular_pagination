@@ -1,0 +1,15 @@
+<div class="container col-4">
+  <div class="card ">
+     <div class="card-header"><h2></h2></div>
+          <div class="card-body">
+              <form #form="ngForm" autocomplete="off" ngif="dropdownList" (submit)="onSubmit(form)">  
+                  <date-picker name = "date" [(date)]="date">
+                  </date-picker>
+                  <div class="form-group"> 
+                    <button type="submit">Submit</button>
+                  </div>
+                </form>   
+        </div>
+    <div class="card-footer"></div>
+  </div>
+</div>
