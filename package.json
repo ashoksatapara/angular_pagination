@@ -27,7 +27,7 @@
     "angular-highcharts": "^8.0.3",
     "angular-progress-bar": "^1.0.9",
     "bootstrap": "^4.4.1",
-    "highcharts": "^8.0.0",
+    "highcharts": "^9.0.0",
     "highcharts-angular": "^2.4.0",
     "html2canvas": "^1.0.0-rc.5",
     "jquery": "^3.4.1",
